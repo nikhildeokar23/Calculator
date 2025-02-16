@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <style>
+        .calculator {
+            width: 400px;
+            background-color:#2E8463;
+            padding: 50px 30px;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            top: 50%;
+            left:50%;
+            border-radius: 8px;
+            box-shadow: 0 20px 50px rgb(40, 113,85);
+        }
+
+        .display {
+            width: 100%;
+        }
+
+        .display input {
+            width: 100%;
+            padding: 15px 10px;
+            text-align: right;
+            border: none;
+            background-color: transparent;
+            color: #ffffff;
+            font-size: 35px;
+        }
+
+        .display input::placeholder {
+            color: #B9B6C8;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-gap:20px;
+            margin-top: 40px;
+        }
+
+        .buttons input[type="button"] {
+            font-size: 20px;
+            padding: 17px;
+            border: none;
+            background-color: transparent;
+            color: #ffffff;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        input[type="button"]#equal {
+            grid-row: span 2;
+            background-color: #FA726B;
+        }
+
+        input[type="button"][value="0"] {
+            grid-column: span 2;
+        }
+        
+    </style>
+</head>
+
+
+<body>
+    <div class="calculator">
+        <div class="display">
+          <input type="text" placeholder="0" id="input" disabled >
+        </div>
+        <div class="buttons">
+         
+          <input type="button" value="C" id="clear" >
+         
+          <input type="button" value="DEL" id="erase" />
+          <input type="button" value="/" class="input-button" />
+          <input type="button" value="*" class="input-button" />
+  
+          <input type="button" value="7" class="input-button" />
+          <input type="button" value="8" class="input-button" />
+          <input type="button" value="9" class="input-button" />
+          <input type="button" value="-" class="input-button" />
+  
+          <input type="button" value="6" class="input-button" />
+          <input type="button" value="5" class="input-button" />
+          <input type="button" value="4" class="input-button" />
+          <input type="button" value="+" class="input-button" />
+  
+          <input type="button" value="1" class="input-button" />
+          <input type="button" value="2" class="input-button" />
+          <input type="button" value="3" class="input-button" />
+  
+          <input type="button" value="=" id="equal" />
+          <input type="button" value="0" class="input-button" />
+          <input type="button" value="." class="input-button" />
+        </div>
+      </div>
+      
+    <script src="script.js"></script>
+</body>
+</html>
